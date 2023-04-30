@@ -8,16 +8,14 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
-import styles from './styles/app.css';
+import styles from "./styles/tailwind.css";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "New Remix App",
   viewport: "width=device-width,initial-scale=1",
 });
-export const links: LinksFunction = () => ([
-  {rel: 'stylesheet', href: styles},
-])
+export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
 export default function App() {
   return (
@@ -26,7 +24,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-lightPrimary">
+      <body className="min-h-screen py-12 bg-lightPrimary text-darkPrimary px-7">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
